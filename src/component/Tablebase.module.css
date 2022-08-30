@@ -1,0 +1,43 @@
+.table {
+  border-collapse: collapse;
+  --border-color-default: black;
+  --backgroung-color-header: yellow;
+
+  --border-color-header: red;
+  --backgroung-color-line-odd: rgb(240, 254, 255);
+  --backgroung-color-line-even: white;
+}
+
+.header {
+  background-color: greenyellow;
+}
+
+/* header lines*/
+tr > th:first-child {
+  border-left: 1px solid var(--border-color-header);
+}
+tr > th {
+  border-top: 1px solid var(--border-color-header);
+  border-bottom: 1px solid var(--border-color-header);
+}
+tr > th:last-child {
+  border-right: 1px solid var(--border-color-header);
+}
+
+.body > tr:nth-child(odd) {
+  background-color: var(--backgroung-color-line-odd);
+}
+.body > tr:nth-child(even) {
+  background-color: var(--backgroung-color-line-even);
+}
+
+/* body lines*/
+tr > td:first-child {
+  border-left: 1px solid var(--border-color-default);
+}
+tr > td {
+  border-bottom: 1px solid var(--border-color-default);
+}
+tr > td:last-child {
+  border-right: 1px solid var(--border-color-default);
+}
